@@ -1,0 +1,35 @@
+
+// MIXIN-ADAPTIV
+//================================================================================
+@mixin max-w($width, $units: px) {
+  @media only screen and (max-width: $width + $units) {
+    @content
+  }
+}
+
+@mixin min-w($width, $units: px) {
+  @media only screen and (min-width: $width + $units) {
+    @content
+  }
+}
+
+@mixin max-min($width-max, $width-min, $units: px) {
+  @media only screen and (max-width: $width-max + $units) and (min-width: $width-min + $units) {
+    @content
+  }
+}
+
+
+@mixin max-h($height, $units: px) {
+  @media only screen and (max-height: $height + $units) {
+    @content
+  }
+}
+
+@mixin min-h($height, $units: px) {
+  @media only screen and (min-height: $height + $units){
+    @content
+  }
+}
+
+
